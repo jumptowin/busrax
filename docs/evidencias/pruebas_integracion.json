@@ -1,0 +1,67 @@
+{
+  "fecha": "2026-10-23T04:00:39.216292+00:00",
+  "pruebas": [
+    {
+      "prueba": "Pedido válido con dos renglones",
+      "resultado": "OK"
+    },
+    {
+      "prueba": "SKU inexistente no deja un pedido huérfano",
+      "resultado": "OK"
+    },
+    {
+      "saldo": 1,
+      "prueba": "Picking de 6 unidades desde ubicaciones con 3 y 4",
+      "resultado": "OK",
+      "movimientos": 3
+    },
+    {
+      "prueba": "Segundo picking del mismo pedido rechazado",
+      "resultado": "OK"
+    },
+    {
+      "prueba": "Faltante en el segundo renglón revierte el primero",
+      "resultado": "OK",
+      "egresos_persistidos": 0
+    },
+    {
+      "prueba": "Recepción de 3 sobre 10 conserva la compra pendiente",
+      "resultado": "OK",
+      "saldo_por_recibir": 7
+    },
+    {
+      "prueba": "Reposición duplicada rechazada",
+      "resultado": "OK"
+    },
+    {
+      "prueba": "Ingreso mayor que el saldo rechazado sin mover stock",
+      "resultado": "OK"
+    },
+    {
+      "prueba": "Recepción del saldo completa la compra",
+      "resultado": "OK",
+      "stock_final": 11
+    },
+    {
+      "prueba": "Hoja de ruta con licencia vencida rechazada",
+      "resultado": "OK"
+    },
+    {
+      "prueba": "Pedido de 7 kg no cabe en vehículo de 5 kg",
+      "resultado": "OK"
+    },
+    {
+      "prueba": "Salida y despacho de pedido confirmados juntos",
+      "resultado": "OK"
+    },
+    {
+      "prueba": "Cierre con una entrega pendiente rechazado",
+      "resultado": "OK"
+    },
+    {
+      "prueba": "Entrega y cierre de viaje completos",
+      "resultado": "OK"
+    }
+  ],
+  "datos_de_prueba": "revertidos"
+}

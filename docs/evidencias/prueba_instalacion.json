@@ -1,0 +1,9 @@
+{
+  "stock": 352,
+  "pedidos": 4,
+  "entregas": 3,
+  "productos": 12,
+  "resultado": "OK",
+  "tablas_con_rls": 15,
+  "esquema_de_prueba": "revertido"
+}

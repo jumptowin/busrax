@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#153e3b">
+<meta name="author" content="Sala Santiago, Salinas Maximiliano y Rivero Federico">
+<meta name="description" content="BUSRAX. Stock, compras, pedidos y distribución en una misma operación.">
+<title>BUSRAX · Operaciones</title>
+<link rel="icon" href="brand.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#vista">Ir al contenido</a>
+<aside class="sidebar">
+  <a class="brand" href="#panel" aria-label="BUSRAX, inicio"><img src="brand.svg" alt="" width="38" height="38"><div><strong>BUSRAX</strong><small>Centro de distribución</small></div></a>
+  <p class="nav-label">OPERACIÓN</p>
+  <nav class="nav" id="nav" aria-label="Navegación principal">
+    <a href="#panel" data-v="panel" class="on"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z"/></svg><span>Panel</span></a>
+    <a href="#stock" data-v="stock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 7 9-4 9 4-9 4-9-4Zm0 0v10l9 4 9-4V7M12 11v10M7 5l10 4"/></svg><span>Stock</span></a>
+    <a href="#compras" data-v="compras"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16v13H4zM8 8V6a4 4 0 0 1 8 0v2M9 13h6"/></svg><span>Compras</span></a>
+    <a href="#pedidos" data-v="pedidos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v17H6zM9 2h6v4H9zM9 10h6M9 14h6M9 18h4"/></svg><span>Pedidos</span></a>
+    <a href="#rutas" data-v="rutas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h8a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h10M3 5a2 2 0 1 0 4 0 2 2 0 1 0-4 0M17 19l2 2-2 2"/></svg><span>Rutas</span></a>
+    <a href="#movimientos" data-v="movimientos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h17l-4-4M21 17H4l4 4M20 7l-4 4M4 17l4-4"/></svg><span>Movimientos</span></a>
+    <a href="#flota" data-v="flota"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h12v12H2zM14 10h4l4 4v4h-8M5 18a2 2 0 1 0 4 0m7 0a2 2 0 1 0 4 0"/></svg><span>Flota</span></a>
+  </nav>
+  <div class="sidebar-note"><span class="dot"></span><div>Informática Aplicada<small>Centro de distribución · 2026</small></div></div>
+</aside>
+<header class="top"><div><span class="header-title">BUSRAX · Operaciones</span><small id="actualizado">Consultando datos…</small></div><div class="row"><span id="estadoConexion" class="pill" role="status">Conectando…</span><button class="refresh" id="recargar" title="Actualizar datos" aria-label="Actualizar datos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7a9 9 0 1 0 1 7M20 2v6h-6"/></svg></button></div></header>
+<main id="vista" tabindex="-1" aria-live="polite"><p class="vacio">Cargando la operación…</p></main>
+<footer class="page-footer">BUSRAX · Sistema de operaciones del centro de distribución</footer>
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo" hidden><div class="sheet"><div class="sheet-h"><h3 id="modalTitulo"></h3><button class="x" id="modalCerrar" aria-label="Cerrar">×</button></div><div id="modalCuerpo"></div></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="vendor/supabase.js"></script>
+<script src="helpers.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
